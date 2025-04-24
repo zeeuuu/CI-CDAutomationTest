@@ -16,7 +16,7 @@ Repositori ini menggunakan **GitHub Actions** untuk mengotomatisasi proses integ
 
 Berikut workflow ketika sukses dijalankan:
 
-![Workflow Success](Build Success.PNG)
+![Workflow Success] (Build Success.PNG)
 
 ## Menjalankan Pengujian Secara Manual
 
