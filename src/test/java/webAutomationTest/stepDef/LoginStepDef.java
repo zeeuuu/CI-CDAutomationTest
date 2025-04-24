@@ -18,7 +18,6 @@ public class LoginStepDef {
 
     @Before
     public void beforeTest() {
-        driver = WebDriverManager.chromedriver().create();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         WebDriverManager.chromedriver().setup();
