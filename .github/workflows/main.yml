@@ -1,0 +1,52 @@
+name: Run CI Web Automation
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest #windows-latest
+
+    steps:
+      # Download Repository
+      - uses: actions/checkout@v4
+
+      # Setup Java
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      # Install Browser
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1.7.3
+        with:
+          chrome-version: latest
+          #chrome-options: '--headless'
+
+      # Setup Gradlew
+      - name: Setup gradlew
+        run:
+         chmod +x gradlew
+         ./gradlew build
+
+      # Execute the gradle command for running the cucumber test
+      - name: Execute Test
+        run: ./gradlew clean test
+
+      #Results documentation
+      - name: Archive Test Results
+        uses: actions/upload-artifact@4.3.0
+        if: always() #success(), failure(), canceled()
+        with:
+         name: test reports
+         path: target/test-reports.html
