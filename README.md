@@ -14,10 +14,6 @@ Repositori ini menggunakan **GitHub Actions** untuk mengotomatisasi proses integ
    - Menjalankan proses pengujian.
    - Mengunggah hasil pengujian sebagai artefak ke halaman Github Actions.
 
-Berikut workflow ketika sukses dijalankan:
-
-![Workflow Success] (BuildSuccess.PNG)
-
 ## Menjalankan Pengujian Secara Manual
 
 1. Pastikan Java dan Gradle sudah terinstal.
