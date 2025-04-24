@@ -45,4 +45,4 @@ jobs:
         if: always() #success(), failure(), canceled()
         with:
          name: test reports
-         path: target/test-reports.html
+         path: reports/cucumber.html
