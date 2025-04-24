@@ -12,7 +12,10 @@ Repositori ini menggunakan **GitHub Actions** untuk mengotomatisasi proses integ
    - Menginstal seluruh dependensi yang dibutuhkan. 
    - Menjalankan proses build menggunakan Gradle.
    - Menjalankan proses pengujian.
-   - Mengunggah hasil pengujian sebagai artefak ke halaman Github Actions..
+   - Mengunggah hasil pengujian sebagai artefak ke halaman Github Actions.
+
+Berikut workflow ketika sukses dijalankan:
+![Workflow Success](Build Success.PNG)
 
 ## Menjalankan Pengujian Secara Manual
 
@@ -33,5 +36,5 @@ Repositori ini menggunakan **GitHub Actions** untuk mengotomatisasi proses integ
 
 ## Hasil Pengujian
 
-- Saat menggunakan GitHub Actions, hasil pengujian akan disimpan ke file `test-result.log` sebagai artefak setelah pipeline selesai dijalankan, yang bisa diunduh dari halaman GitHub Actions.
-- Jika pengujian dijalankan secara manual, laporan pengujian dapat ditemukan di direktori `build/reports/tests/test/index.html`
+- Saat menggunakan GitHub Actions, hasil pengujian sebagai artefak setelah pipeline selesai dijalankan dapat diunduh dari halaman GitHub Actions.
+- Jika pengujian dijalankan secara manual, laporan pengujian dapat ditemukan di direktori `reports/cucumber.html`
