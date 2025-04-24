@@ -15,6 +15,7 @@ Repositori ini menggunakan **GitHub Actions** untuk mengotomatisasi proses integ
    - Mengunggah hasil pengujian sebagai artefak ke halaman Github Actions.
 
 Berikut workflow ketika sukses dijalankan:
+
 ![Workflow Success](Build Success.PNG)
 
 ## Menjalankan Pengujian Secara Manual
